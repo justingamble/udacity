@@ -1,5 +1,4 @@
 runtime: python27
-application: justins-udacity
 api_version: 1
 threadsafe: true
 
