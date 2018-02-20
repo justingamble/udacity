@@ -13,14 +13,42 @@
 # limitations under the License.
 
 import webapp2
+import cgi
+#<h2>Enter some text to ROT13:</h2>
+formData="""
+<form method="post" action="/testform">
 
+  <br>
+  <textarea name='text' rows="20" cols="70" value="%(user_text)">
+  </textarea>
+  <br>
+  <input type="submit">
+</form>
+"""
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('Hello, Udacity!')
+        self.response.headers['Content-Type'] = 'text/html'
+        self.response.write(formData)
 
+class TestHandler(webapp2.RequestHandler):
+    def post(self):
+        entered_text = self.request.get('text')
+        escaped_text =  self.escape_text( entered_text )
+        self.write_form(escaped_text)
+#        self.response.headers['Content-Type'] = 'text/plain'
+#        self.response.out.write(self.request)
+##        self.redirect('/')
+
+    def write_form(self, user_text=''):
+#        self.response.out.write(user_text)
+        self.response.out.write(formData % {"user_text": user_text})
+##        self.response.out.write(formData)
+
+    def escape_text(self, s):
+        return cgi.escape(s, quote = True);
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
+    ('/testform', TestHandler),
 ], debug=True)
