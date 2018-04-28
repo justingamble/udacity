@@ -12,3 +12,7 @@ Normally a design sprint lasts for 4 days.  Each day of the design sprint corres
 Udacity course.
  
 Here I made one directory for each week of the course.  There is an assignment each week.
+
+## Links
+
+My solution for Day 3's assignment was to create a prototype using the Marvel online tool.  The Day3Project subdirectory contains screenshots, but it is more fun to interact with it directly online via:   ["https://marvelapp.com/cbe1eij/"](https://marvelapp.co/cbe1eij)
