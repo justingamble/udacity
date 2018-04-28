@@ -15,4 +15,4 @@ Here I made one directory for each week of the course.  There is an assignment e
 
 ## Links
 
-My solution for Day 3's assignment was to create a prototype using the Marvel online tool.  The Day3Project subdirectory contains screenshots, but it is more fun to interact with the prototype directly via:   [https://marvelapp.com/cbe1eij/](https://marvelapp.co/cbe1eij)
+My solution for Day 3's assignment was to create a prototype using the Marvel online tool.  The Day3Project subdirectory contains screenshots, but it is more fun to interact with the prototype directly via:   [https://marvelapp.com/cbe1eij/](https://marvelapp.com/cbe1eij)
